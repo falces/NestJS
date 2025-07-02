@@ -1,20 +1,24 @@
-Instalar NVM
+# Instalar NVM
 
-https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+## WSL
+
+Documentación: https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl
+
+Instalar CUR y NVM (Node Version Manager):
 
 ```
 $ sudo apt-get install curl
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 ```
 
-Reiniciar terminal
+Reiniciar terminal. Comprobar la instalación:
 
 ```
 $ command -v nvm
 nvm
 ```
 
-Listar versiones Node instaladas
+Listar versiones Node instaladas:
 
 ```
 $ nvm ls
@@ -24,14 +28,14 @@ node -> stable (-> N/A) (default)
 unstable -> N/A (default)
 ```
 
-Instalar:
+Instalar versión actual y LTS de Node:
 
 ```
 $ nvm install --lts
 $ nvm install node
 ```
 
-Listar
+Ahora tenemos dos versiones disponibles:
 
 ```
 $ nvm ls
@@ -55,10 +59,27 @@ lts/iron -> v20.19.3 (-> N/A)
 lts/jod -> v22.17.0
 ```
 
-Versión actual
+Ver la versión activa:
 
 ```
 $ node --version
 v24.3.0
 ```
 
+# Instalar NestJS
+
+Documentación: https://docs.nestjs.com/first-steps
+
+```
+$ npm i -g @nestjs/cli
+```
+
+Crear proyecto NestJS:
+
+```
+$ nest new app
+
+✔ Which package manager would you ❤️  to use? npm
+```
+
+Esto crea un proyecto base en la carpeta `/app`.

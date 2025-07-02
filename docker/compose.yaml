@@ -1,7 +1,8 @@
 services:
   nestapp:
     build:
-      context: .
+      context: ../
+      dockerfile: ./docker/Dockerfile
     container_name: ${MICROSERVICE_NAME}
     working_dir: /src/app
     volumes:
