@@ -1,0 +1,17 @@
+services:
+  nestapp:
+    build:
+      context: .
+    container_name: ${MICROSERVICE_NAME}
+    working_dir: /src/app
+    volumes:
+      - ../app:/src/app
+      - node_modules:/src/app/node_modules
+    ports:
+      - '${PUBLIC_HTTP_PORT}:3000'
+    stdin_open: true
+    tty: true
+    entrypoint: /bin/sh /src/entrypoint.sh
+volumes:
+  node_modules:
+    driver: local
